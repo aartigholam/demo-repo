@@ -11,4 +11,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          config-file: cypress/integration/Mytest/amazon_search.js
+          spec: cypress/integration/Mytest/amazon_search.js
