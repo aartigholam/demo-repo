@@ -4,11 +4,14 @@ jobs:
   cypress-run:
     name: Cypress run
     runs-on: ubuntu-20.04
+        strategy:
+      matrix:
+        node: [12]
     steps:
       - name: Checkout
-        uses: actions/checkout
+        uses: actions/checkout@v2
 
       - name: Cypress run
-        uses: cypress-io/github-action
+        uses: cypress-io/github-action@v4
         with:
           spec: cypress/integration/Mytest/amazon_search.js
