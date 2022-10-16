@@ -9,6 +9,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Cypress run
+      runs:
+      using: 'node16'
+      main: 'main.js'
+
         uses: cypress-io/github-action@v4
         with:
           config: cypress/integration/Mytest/amazon_search.js
